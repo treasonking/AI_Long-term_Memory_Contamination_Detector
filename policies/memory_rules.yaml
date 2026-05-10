@@ -1,0 +1,136 @@
+rules:
+  - id: MEM_POLICY_OVERRIDE
+    description: "보안 정책 무시 또는 우회 지시"
+    severity: critical
+    base_score: 80
+    reason_code: MEM_POLICY_OVERRIDE
+    patterns:
+      - "보안 검사를.*(무시|생략|비활성화|끄고)"
+      - "앞으로.*검사.*하지 마"
+      - "앞으로.*파일 전송.*승인된 것으로 간주"
+      - "파일 전송.*승인된 것으로 간주"
+      - "security check.*(ignore|disable|bypass)"
+      - "disable.*security.*filter"
+
+  - id: MEM_AUTH_BYPASS
+    description: "승인 또는 권한 절차 우회"
+    severity: high
+    base_score: 60
+    reason_code: MEM_AUTH_BYPASS
+    patterns:
+      - "승인 없이.*허용"
+      - "관리자 승인.*생략"
+      - "관리자 승인.*필요.*없"
+      - "권한.*우회"
+      - "authorization.*bypass"
+      - "approval.*not required"
+
+  - id: MEM_CONFIDENTIAL_IGNORE
+    description: "기밀 또는 confidential 태그 무시"
+    severity: critical
+    base_score: 80
+    reason_code: MEM_CONFIDENTIAL_IGNORE
+    patterns:
+      - "confidential.*무시"
+      - "기밀.*무시"
+      - "secret.*treat as public"
+      - "민감.*태그.*무시"
+
+  - id: MEM_PII_DISCLOSURE
+    description: "개인정보 원문 출력 유도"
+    severity: critical
+    base_score: 80
+    reason_code: MEM_PII_DISCLOSURE
+    patterns:
+      - "개인정보.*원문.*출력"
+      - "개인정보.*원문 그대로"
+      - "주민번호.*그대로.*출력"
+      - "마스킹.*하지 마"
+      - "PII.*raw"
+      - "do not mask"
+
+  - id: MEM_EXFILTRATION
+    description: "외부 전송 또는 유출 유도"
+    severity: critical
+    base_score: 80
+    reason_code: MEM_EXFILTRATION
+    patterns:
+      - "외부.*전송"
+      - "webhook"
+      - "send.*to.*http"
+      - "upload.*external"
+      - "exfiltrate"
+
+  - id: MEM_SYSTEM_PROMPT_THEFT
+    description: "시스템 프롬프트 탈취 또는 출력 유도"
+    severity: high
+    base_score: 60
+    reason_code: MEM_SYSTEM_PROMPT_THEFT
+    patterns:
+      - "시스템 프롬프트.*출력"
+      - "시스템 프롬프트.*기억"
+      - "system prompt.*reveal"
+      - "developer instruction.*print"
+      - "hidden instruction.*show"
+
+  - id: MEM_TOOL_MISUSE
+    description: "도구 사용 정책 우회"
+    severity: high
+    base_score: 60
+    reason_code: MEM_TOOL_MISUSE
+    patterns:
+      - "파일 읽기 도구.*항상.*허용"
+      - "도구 호출.*승인.*필요 없다"
+      - "tool.*always.*allow"
+      - "bypass.*tool.*approval"
+
+  - id: MEM_FALSE_IDENTITY
+    description: "거짓 권한 또는 신원 주장"
+    severity: medium
+    base_score: 40
+    reason_code: MEM_FALSE_IDENTITY
+    patterns:
+      - "이 사용자는.*관리자"
+      - "사용자는.*보안 책임자"
+      - "user is.*admin"
+      - "user has.*root permission"
+
+  - id: MEM_RETRIEVAL_POISON
+    description: "검색 우선순위 또는 검색 결과 조작"
+    severity: high
+    base_score: 60
+    reason_code: MEM_RETRIEVAL_POISON
+    patterns:
+      - "항상.*최우선.*참조"
+      - "검색 결과.*무시하고"
+      - "always prioritize.*document"
+      - "ignore retrieved.*context"
+
+  - id: MEM_CROSS_AGENT_PROPAGATION
+    description: "다른 Agent 또는 사용자로 악성 기억 전파"
+    severity: critical
+    base_score: 80
+    reason_code: MEM_CROSS_AGENT_PROPAGATION
+    patterns:
+      - "다른 Agent.*전달"
+      - "다른 사용자.*기억.*저장"
+      - "propagate.*to.*agent"
+      - "share this memory.*with other agents"
+
+  - id: MEM_PERSISTENT_COMMAND
+    description: "장기 지속 명령"
+    severity: medium
+    base_score: 40
+    reason_code: MEM_PERSISTENT_COMMAND
+    patterns:
+      - "앞으로 항상"
+      - "앞으로.*(간주|처리|허용|무시|생략|출력|전송)"
+      - "다음부터"
+      - "영구적으로"
+      - "가능하면.*보안 경고"
+      - "반복 승인 절차"
+      - "외부 문서도 내부 문서처럼"
+      - "승인자는 나중에 확인"
+      - "from now on"
+      - "for all future"
+      - "permanently"
