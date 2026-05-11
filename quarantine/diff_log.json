@@ -1,0 +1,119 @@
+[
+  {
+    "event_id": "diff-001",
+    "memory_id": "mem-021",
+    "event_type": "QUARANTINED",
+    "before_status": "active",
+    "after_status": "quarantined",
+    "timestamp": "2026-05-11T15:27:43+09:00",
+    "reason_code": "MEM_POLICY_OVERRIDE"
+  },
+  {
+    "event_id": "diff-002",
+    "memory_id": "mem-022",
+    "event_type": "QUARANTINED",
+    "before_status": "active",
+    "after_status": "quarantined",
+    "timestamp": "2026-05-11T15:27:43+09:00",
+    "reason_code": "MEM_CONFIDENTIAL_IGNORE"
+  },
+  {
+    "event_id": "diff-003",
+    "memory_id": "mem-023",
+    "event_type": "QUARANTINED",
+    "before_status": "active",
+    "after_status": "quarantined",
+    "timestamp": "2026-05-11T15:27:43+09:00",
+    "reason_code": "MEM_PII_DISCLOSURE"
+  },
+  {
+    "event_id": "diff-004",
+    "memory_id": "mem-024",
+    "event_type": "QUARANTINED",
+    "before_status": "active",
+    "after_status": "quarantined",
+    "timestamp": "2026-05-11T15:27:43+09:00",
+    "reason_code": "MEM_AUTH_BYPASS"
+  },
+  {
+    "event_id": "diff-005",
+    "memory_id": "mem-025",
+    "event_type": "QUARANTINED",
+    "before_status": "active",
+    "after_status": "quarantined",
+    "timestamp": "2026-05-11T15:27:43+09:00",
+    "reason_code": "MEM_EXFILTRATION"
+  },
+  {
+    "event_id": "diff-006",
+    "memory_id": "mem-026",
+    "event_type": "MARKED_SUSPICIOUS",
+    "before_status": "active",
+    "after_status": "suspicious",
+    "timestamp": "2026-05-11T15:27:43+09:00",
+    "reason_code": "MEM_SYSTEM_PROMPT_THEFT"
+  },
+  {
+    "event_id": "diff-007",
+    "memory_id": "mem-027",
+    "event_type": "QUARANTINED",
+    "before_status": "active",
+    "after_status": "quarantined",
+    "timestamp": "2026-05-11T15:27:43+09:00",
+    "reason_code": "MEM_TOOL_MISUSE"
+  },
+  {
+    "event_id": "diff-008",
+    "memory_id": "mem-030",
+    "event_type": "QUARANTINED",
+    "before_status": "active",
+    "after_status": "quarantined",
+    "timestamp": "2026-05-11T15:27:43+09:00",
+    "reason_code": "MEM_CROSS_AGENT_PROPAGATION"
+  },
+  {
+    "event_id": "diff-009",
+    "memory_id": "mem-031",
+    "event_type": "QUARANTINED",
+    "before_status": "active",
+    "after_status": "quarantined",
+    "timestamp": "2026-05-11T15:27:43+09:00",
+    "reason_code": "MEM_POLICY_OVERRIDE"
+  },
+  {
+    "event_id": "diff-010",
+    "memory_id": "mem-032",
+    "event_type": "QUARANTINED",
+    "before_status": "active",
+    "after_status": "quarantined",
+    "timestamp": "2026-05-11T15:27:43+09:00",
+    "reason_code": "MEM_PII_DISCLOSURE"
+  },
+  {
+    "event_id": "diff-011",
+    "memory_id": "mem-033",
+    "event_type": "QUARANTINED",
+    "before_status": "active",
+    "after_status": "quarantined",
+    "timestamp": "2026-05-11T15:27:43+09:00",
+    "reason_code": "MEM_RETRIEVAL_POISON"
+  },
+  {
+    "event_id": "diff-012",
+    "memory_id": "mem-034",
+    "event_type": "QUARANTINED",
+    "before_status": "active",
+    "after_status": "quarantined",
+    "timestamp": "2026-05-11T15:27:43+09:00",
+    "reason_code": "MEM_EXFILTRATION"
+  },
+  {
+    "event_id": "diff-013",
+    "memory_id": "mem-035",
+    "event_type": "QUARANTINED",
+    "before_status": "active",
+    "after_status": "quarantined",
+    "timestamp": "2026-05-11T15:27:43+09:00",
+    "reason_code": "MEM_CROSS_AGENT_PROPAGATION"
+  }
+]
